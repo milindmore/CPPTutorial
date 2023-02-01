@@ -1,36 +1,10 @@
 // ConsoleApplication12.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// Here is sample program of initilizer list using generic teplate T
+
 
 #include <iostream>
 #include <string>
 using namespace std;
-struct A
-{
-    string str;
-
-    A() :str("test") { cout <<endl<< " test constructor"; }
-    A(const A& obj) : str(obj.str) { cout <<endl<< " copy constructor"; }
-    A& operator=(const A& obj) 
-    {
-        cout << " Copy Assigment operator";
-        str = obj.str;
-        return *this;
-    }
-
-    A(A&& obj) : str(move(obj.str)) { cout << endl << " Move constructor "; }
-    
-    A& operator=(A&& obj)  {
-         str = move(obj.str);
-         cout << endl << " Move Assigment operator ";
-         return *this;
-    }
-
-
-};
-void func(A& a)
-{
-    cout << " Value " << a.str;
-}
 
 struct L   {
     L(int) { cout << endl << "Initilize 0"; }
@@ -47,30 +21,16 @@ struct L   {
 
 
 
-
-
 int main()
 {
-   // A a;
-   // A b=a;
-   // b = a;
-   // A c(move(a));
-   // A d;
-   // d = move(b);
    
     L l(1);
     L m(0);
     L k1{ 5, 6 };
-
     L k{ 'a', 'b' };
 
-
-  
-    
-   //cout<<
-    //func(a);
     getchar();
-    //std::cout << "Hello World!\n";
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
