@@ -1,2 +1,14 @@
 
 general/toaster/toastDrv/exe/enum/enum.c
+
+#include <iostream>
+#include <conio.h>
+#include <Windows.h>
+#include <WinUser.h>
+#include <winioctl.h>
+#include <cfgmgr32.h>
+#include <strsafe.h>
+
+#include <initguid.h>
+#include <guiddef.h>
+#include <devguid.h>
